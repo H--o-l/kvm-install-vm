@@ -268,7 +268,7 @@ function delete_vm ()
     else
         output "Domain ${VMNAME} does not exist"
     fi
-    
+
     [[ -d ${VMDIR}/${VMNAME} ]] && DISKDIR=${VMDIR}/${VMNAME} || DISKDIR=${IMAGEDIR}/${VMNAME}
     [ -d $DISKDIR ] \
         && outputn "Deleting ${VMNAME} files" \
@@ -301,7 +301,7 @@ function fetch_images ()
             LOGIN_USER=ec2-user
             ;;
         centos8)
-            QCOW=CentOS-8-GenericCloud-8.1.1911-20200113.3.x86_64.qcow2
+            QCOW=CentOS-8-GenericCloud-8.3.2011-20201204.2.x86_64.qcow2
             OS_TYPE="linux"
             OS_VARIANT="centos8"
             IMAGE_URL=https://cloud.centos.org/centos/8/x86_64/images
